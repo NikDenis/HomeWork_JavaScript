@@ -1,10 +1,10 @@
 import { dataProducts } from "./data.js";
 
 const productData = JSON.parse(dataProducts);
-const productList = document.querySelector('.products-list');
- 
-productData.forEach(({image, name, discription, price}) => {
-    const productEl = `
+const productList = document.querySelector(".products-list");
+
+productData.forEach(({ image, name, discription, price }) => {
+  const productEl = `
     <li class="products-list-item">
       <article class="products-item-cart wrp-color">
         <div class="products-item-photo-wrp">
@@ -27,6 +27,5 @@ productData.forEach(({image, name, discription, price}) => {
       </article>
     </li>`;
 
-    productList.insertAdjacentHTML('beforeend', productEl);
+  productList.insertAdjacentHTML("beforeend", productEl);
 });
-
